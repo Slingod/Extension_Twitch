@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            font-family: system-ui, Arial;
+            width: 330px;
+            padding: 12px;
+            margin: 0;
+
+            background-image: url("assets/bglive.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .card {
+            border-radius: 16px;
+            padding: 12px;
+            background: rgba(0,0,0,0.45);
+            backdrop-filter: blur(8px);
+            color: #fff;
+        }
+
+        .row { display:flex; gap:10px; align-items:center; }
+        .dot { width:10px; height:10px; border-radius:50%; background:#aaa; flex: 0 0 auto; }
+        .dot.live { background:#e11; }
+
+        .statusLink {
+            font-weight: 800;
+            text-decoration: none;
+            line-height: 1.2;
+            display: inline-block;
+            max-width: 270px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #fff; /* toujours blanc */
+        }
+
+        /* Live/offline = juste une nuance d'opacité */
+        .statusLink.live { opacity: 1; }
+        .statusLink.offline { opacity: 0.9; }
+
+        .actions { display:flex; gap:10px; margin-top: 10px; }
+
+        button {
+            padding: 10px 12px;
+            border: 0;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            min-width: 110px;
+            color: #fff;
+        }
+
+        /* OFF = gris */
+        .btnPrimaryOff  { background:#777; }
+
+        /* LIVE = rouge */
+        .btnPrimaryLive { background:#e11; }
+
+        .small {
+            font-size: 12px;
+            opacity: 0.85;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+<div id="list"></div>
+<script src="popup.js"></script>
+</body>
+</html>
